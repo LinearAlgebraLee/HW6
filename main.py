@@ -6,7 +6,7 @@ def main():
     img_path = 'img/vegetable_english.jpg'
     imArr = load_image(img_path)
 
-    ks = [1, 5, 50, 150, 400, 1050, 1289]
+    ks = [1, 5, 50, 150, 400, 600, 800, 1050, 1200]
     err = []
     for k in ks:
         print("Perform SVD for k=%d ..." % k)
