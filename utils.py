@@ -43,7 +43,7 @@ def plot_curve(k, err, fpath='curve.png', show=False):
         plt.savefig(fpath, dpi=300)
 
 def approx_error(imArr, imArr_compressed):
-    """Calculate approximation error 
+    """Calculate RMSE approximation error 
     Arg:
         Two numpy arrays
     Return:
@@ -51,4 +51,4 @@ def approx_error(imArr, imArr_compressed):
     """
     v = imArr.ravel().astype(float)
     u = imArr_compressed.ravel().astype(float)
-    return np.linalg.norm(v - u) / len(v)
+    return np.linalg.norm(v - u) / np.sqrt(len(v)) / 255
